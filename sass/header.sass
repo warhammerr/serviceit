@@ -1,0 +1,119 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.1
+	font-family: "OpenSans-Regular",sans-serif
+	overflow-x: hidden
+
+.hidden
+	display: none
+
+h1
+	font-size: em(52pt)
+	font-weight: 400
+h2
+	font-size: em(32pt)
+	font-weight: 400
+h3
+	font-size: em(20pt)
+	line-height: em(24pt)
+	font-weight: 400
+h4
+	font-size: em(18pt)
+	line-height: em(21.6pt)
+	font-weight: 400
+h5
+	font-size: em(16pt)
+	font-weight: 400
+h6
+	font-size: em(14.8pt)
+	font-weight: 400
+
+.padding-left-clear
+	padding-left: 0px
+
+.main-head
+	position: relative
+	min-height: 700px
+	background-image: url('/img/header_bg.png')
+	background-size: cover
+	background-position: 40% bottom
+	background-repeat: no-repeat
+
+.main-line
+	line-height: 14px
+	padding-top: 25px
+
+.main-line a 
+	color: #FFF
+
+.top-line
+	line-height: 14px
+	padding-top: 10px
+
+.top-line a 
+	color: #FFF
+
+.main-head 
+	.logo 
+		img
+			width: 170px
+			padding-top: 20px
+
+.top-mnu
+	li
+		line-height: 30px
+		padding: 0 20px
+		.active
+			text-decoration: underline
+	ul
+		@extend .ul-mnu
+	a
+		font-family: "OpenSans-SemiBold"
+
+.ul-mnu 
+	list-style: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+.slogan
+	color: #FFF
+	line-height: 60px
+	font-family: "YesevaOne-Regular"
+	h1
+		font-weight: 400
+
+
+.sub-slogan
+	color: #FFF
+	color: #FFF
+	line-height: 20px
+	font-family: "OpenSans-Regular"
+	h3
+		line-height: em(19pt)
+		margin-top: 10px
+
+
+.button
+	background-color: #2ECE74
+	font-size: em(14pt)
+	border: 0px solid
+	height: 40px
+	width: 220px
+	color: #FFF
+	display: inline-block
+	text-transform: uppercase
+	line-height: 40px
+	text-align: center
+	border-radius: 20px
+	font-family: "OpenSans-Bold"
+
+.button:hover
+		text-decoration: none
+		color: #FFF
