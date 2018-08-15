@@ -36,7 +36,7 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		])
 		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
+		.pipe(uglify()) //Minify libs.js
 		.pipe(gulp.dest('./app/js/'));
 });
 
@@ -45,12 +45,6 @@ gulp.task('watch', function () {
 	gulp.watch('app/libs/**/*.js', ['scripts']);
 	gulp.watch('app/js/*.js').on("change", browserSync.reload);
 	gulp.watch('app/*.html').on('change', browserSync.reload);
-	browserSync.init({
-				server: {
-						baseDir: "./app"
-				},
-				notify: false
-		});
 });
 
 gulp.task('default', ['browser-sync', 'watch']);

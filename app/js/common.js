@@ -26,12 +26,17 @@ $(function() {
 	});
 
 	$(".project-menu a").on("click",function(e){
+		console.log(1);
 		id=$(this).attr('id');
 		if(id===project_current){
 			return false;
 		}else{
+			height=$('.'+id).height();
+			$(".projects_container").animate({height: height+"px"});
+
 			$("#"+project_current).removeClass("active");
 			$("#"+id).addClass("active");
+
 			$('.'+project_current).animated("slideOutRight");
 			$('.'+project_current).removeClass("slideInLeft");
 			$('.'+id).animated("slideInLeft");
