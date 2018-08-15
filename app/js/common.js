@@ -26,7 +26,6 @@ $(function() {
 	});
 
 	$(".project-menu a").on("click",function(e){
-		console.log(1);
 		id=$(this).attr('id');
 		if(id===project_current){
 			return false;
@@ -39,8 +38,10 @@ $(function() {
 
 			$('.'+project_current).animated("slideOutRight");
 			$('.'+project_current).removeClass("slideInLeft");
+			$('.'+project_current).removeClass("slideOutRight");
 			$('.'+id).animated("slideInLeft");
 			$('.'+id).removeClass("slideOutRight");
+			$('.'+id).removeClass("slideInLeft");
 			project_current = id;
 			return false;
 		}

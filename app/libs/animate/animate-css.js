@@ -9,10 +9,10 @@
 				if (dir === "down") {
 					ths.addClass(inEffect).css("opacity", "1");
 				};
+				this.destroy();
 			}, {
 				offset: "90%"
 			});
-
 		});
 	};
 })(jQuery);
