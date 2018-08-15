@@ -1,5 +1,5 @@
 $(function() {
-
+	var project_current = 'projects_all';
 	//SVG Fallback
 	if(!Modernizr.svg) {
 		$("img[src*='svg']").attr("src", function() {
@@ -23,6 +23,22 @@ $(function() {
 			}, 1000);
 		});
 		return false;
+	});
+
+	$(".project-menu a").on("click",function(e){
+		id=$(this).attr('id');
+		if(id===project_current){
+			return false;
+		}else{
+			$("#"+project_current).removeClass("active");
+			$("#"+id).addClass("active");
+			$('.'+project_current).animated("slideOutRight");
+			$('.'+project_current).removeClass("slideInLeft");
+			$('.'+id).animated("slideInLeft");
+			$('.'+id).removeClass("slideOutRight");
+			project_current = id;
+			return false;
+		}
 	});
 
 });
