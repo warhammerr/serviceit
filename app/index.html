@@ -639,8 +639,54 @@
 		</div>
 	</div>
 	<div class="footer-bg"></div>
-	<div class="hidden"></div>
-	
+	<div class="hidden">
+	</div>
+	<!-- Request window -->
+	<div id="modal-form">
+		<span id="modal-close"><img src="/img/close.png"></span>
+		<div id="modal-content">
+			<form name="request">
+				<div class="formgroup title">
+					<h2>Сделать заявку</h2>
+				</div>
+				<div class="formgroup">
+					<div class="input-gradient"> 
+						<input type="text" placeholder="Ваше имя" name="name">
+					</div>
+					<div class="input-gradient"> 
+						<input type="email" placeholder="E-mail" name="email">
+					</div>
+				</div>
+				<div class="formgroup">
+					<div class="input-gradient"> 
+						<input type="text" placeholder="Телефон" name="phone">
+					</div>
+					<div class="input-gradient"> 
+						<input type="text" placeholder="Компания" name="company">
+					</div>
+				</div>
+				<div class="formgroup">
+					<div class="textarea-gradient"> 
+						<textarea name="message" placeholder="Здесь Вы можете написать о Вашем проекте или дать ссылку на ТЗ"></textarea>
+					</div>
+				</div>
+				<div class="formgroup control">
+					<button name="message" value="Отправить" class="gradient">Отправить</button>
+					<button id="close-button" value="Закрыть">Закрыть</button>
+				</div>
+			</form>
+		</div>
+		<div class="modal-footer">
+			<hr/>
+			<div id="modal-content">
+				<h5>ООО <q>Айти-услуги</q></h5>
+				<h6><a href="mailto:info@serviceit.su">info@serviceit.su</a></h6>
+				<h6>+7 (846) 979-26-13</h6>
+			</div>
+		</div>
+	</div>
+	<div id="overlay"></div>
+	<!-- /Request window -->
 	<!--[if lt IE 9]>
 	<script src="libs/html5shiv/es5-shim.min.js"></script>
 	<script src="libs/html5shiv/html5shiv.min.js"></script>
