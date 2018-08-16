@@ -52,10 +52,10 @@ $(function() {
 	});
 
 	$(".photo-gallery-item").on("mouseover",function (e) {
-		$(this).children("div").show(100);
+		$(this).children("div").show(0);
 	});
 	$(".photo-gallery-item").on("mouseleave",function (e) {
-		$(this).children("div").hide(100);
+		$(this).children("div").hide(0);
 	})
 
 });
