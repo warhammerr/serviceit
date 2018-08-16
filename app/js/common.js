@@ -47,4 +47,15 @@ $(function() {
 		}
 	});
 
+	$(".photo-gallery-item").on("click",function (e) {
+		$(this).children("div").toggle(100);
+	});
+
+	$(".photo-gallery-item").on("mouseover",function (e) {
+		$(this).children("div").show(100);
+	});
+	$(".photo-gallery-item").on("mouseleave",function (e) {
+		$(this).children("div").hide(100);
+	})
+
 });
