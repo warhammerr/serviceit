@@ -57,5 +57,10 @@ $(function() {
 	$(".photo-gallery-item").on("mouseleave",function (e) {
 		$(this).children("div").hide(0);
 	})
-
+	$(".top-mnu").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href');
+        var top =$('[name='+id.slice(1)+']').offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
 });
