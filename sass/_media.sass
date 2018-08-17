@@ -137,7 +137,7 @@
 	.projects_container
 		display: block !important
 		width: 98% !important
-		padding-left: 5px !important
+		padding-left: 8px !important
 	.photo-gallery
 		width: 110% !important
 		margin-left: -20px !important
@@ -145,42 +145,147 @@
 		right: -25px !important
 	.after-gallery
 		width: 50% !important
+	
 
+@media only screen and (max-width : 960px)
+	.logo
+		img
+			width: 170px !important
+	.main-head
+		background-size: cover !important
+		background-position: left bottom !important
+	.age
+		background-position: center bottom !important
+	.age-title
+		width: 80% !important
+		margin: 0 auto !important
+	.age-text
+		width: 80% !important
+		margin: 0 auto !important
+	.pride
+		width: 100% !important
+		margin: 0 auto !important
+	.pride-description
+		text-align: left !important
+		width: 100% !important
+		margin: 0 auto !important
+	.pride .text
+		width: 80% !important
+	.projects_container
+		.year
+			 div
+			 	transform: none !important
+			 	position: relative !important
+			 	padding-right: 50px !important
+		.letter
+			text-align: left !important
+
+	.map
+		width: 97% !important
+		margin: 0 auto !important
+	.footer-bg
+		min-height: 900px !important
+		background-position: center top !important
+		background-size: cover !important
+	
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+	.offer-title
+		width: auto !important
+	.offer-text
+		width: auto !important
+	.offer-image
+		display: none !important
+	.offer
+		background: none !important
+		
+	.offer-content
+		width: 100% !important
+	.offer-title
+		width: 80% !important
+		margin: 0 auto !important
+	.offer-text
+		width: 80% !important
+		margin: 0 auto !important
 
+	.photo-gallery
+		width: 120% !important
+		margin-left: -45px !important
+	
 	/*Disable Animation on Mobile Devices*/
-	.animated
+	/* .animated */
 		/*CSS transitions*/
-		-o-transition-property: none !important
+		/*-o-transition-property: none !important
 		-moz-transition-property: none !important
 		-ms-transition-property: none !important
 		-webkit-transition-property: none !important
-		transition-property: none !important
+		transition-property: none !important*/
 		/*CSS transforms*/
-		-o-transform: none !important
+		/*-o-transform: none !important
 		-moz-transform: none !important
 		-ms-transform: none !important
 		-webkit-transform: none !important
-		transform: none !important
+		transform: none !important*/
 		/*CSS animations*/
-		-webkit-animation: none !important
+		/*-webkit-animation: none !important
 		-moz-animation: none !important
 		-o-animation: none !important
 		-ms-animation: none !important
-		animation: none !important
+		animation: none !important*/
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	h1
+		font-size: em(40pt) !important
+	.pride .logo
+		width: 100% !important
+		text-align: center !important
+	.pride .text
+		width: 100% !important
+	.photo-gallery
+		width: 120% !important
+		margin-left: -30px !important
+	.after-gallery
+		width: 100% !important
+	.age
+		background: none !important
+		min-height: 200px !important
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	h1
+		font-size: em(28pt) !important
+		line-height: 40px !important
+	h2
+		font-size: em(22pt) !important
+		line-height: 30px !important
+	h3
+		font-size: em(18pt) !important
+		line-height: auto !important
+	h4
+		font-size: em(16pt) !important
+		line-height: auto !important
+	h5
+		font-size: em(14pt) !important
+		line-height: auto !important
+	h6
+		font-size: em(12pt) !important
+		line-height: auto !important
+	.top-mnu 
+		li
+			padding: 0 3px !important
+	.age-title
+		text-align: center !important
+		width: 90% !important
 
+	.main-head 
+		.site-content
+			width: 100% !important
 
 /*==========  Mobile First Method  ==========*/
 
