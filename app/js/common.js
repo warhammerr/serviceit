@@ -9,18 +9,35 @@ $(function() {
 
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
+	$("#submit-button").on("click",function() {
+		var th = $("form");
+		var name = $("input[name='name']").val();
+		var email = $("input[name='email']").val();
+		var phone = $("input[name='phone']").val();
+		if(!name){
+			$("#request-result").html("<p style='color: red;margin-top: 21px;'>Заполните Ваше имя</p>");
+			return false;
+		}
+		if(!email && !phone ){
+			$("#request-result").html("<p style='color: red;margin-top: 21px;'>Заполните E-mail или Телефон</p>");
+			return false;
+		}
+		$("#request-result").html("");
+		$("#submit-button").attr("disabled",true);
+		$("#submit-button").css("opacity",0.5);
 		$.ajax({
+			dataType: "json",
 			type: "POST",
-			url: "mail.php", //Change
+			url: "/", //Change
 			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
+		}).done(function(result) {
+			if(result.result){
+				$("#request-result").html(result.message);
+				$(th).trigger("reset");
+				$("#request-result").html("");
+				$("#submit-button").attr("disabled",false);
+				$("#submit-button").css("opacity",1);
+			}
 		});
 		return false;
 	});
@@ -84,3 +101,4 @@ $(function() {
 			);
 	});
 });
+
