@@ -28,13 +28,12 @@ $(function() {
 		$.ajax({
 			dataType: "json",
 			type: "POST",
-			url: "/", //Change
+			url: "/",
 			data: th.serialize()
 		}).done(function(result) {
 			if(result.result){
 				$("#request-result").html(result.message);
 				$(th).trigger("reset");
-				$("#request-result").html("");
 				$("#submit-button").attr("disabled",false);
 				$("#submit-button").css("opacity",1);
 			}
